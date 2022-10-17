@@ -1,34 +1,33 @@
 #include <stdio.h>
 /**
- * main - Prints 3 combination of numbers
+ * main - Prints all possible combinations of two two-digit numbers,
+ * ranging from 0-99, separated by a comma followed by a space
  *
- * Return: Always (success)
+ * Return: Always 0
  */
 int main(void)
 {
-	int c, i, k;
+int i, j;
 
-	for (c = '0'; c <= '9'; c++)
-	{
-		for (i = '0'; i <= '9'; i++)
-		{
-			for (k = '0'; k <= '9'; k++)
-			{
-				if (c < i && i < k)
-				{
-					putchar(c);
-					putchar(i);
-					putchar(k);
-
-					if (c != '7')
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
-			}
-		}
-	}
-	putchar('\n');
-	return (0);
+for (i = 0; i < 100; i++)
+{
+for (j = 0; j < 100; j++)
+{
+if (i < j)
+{
+putchar((i / 10) + 48);
+putchar((i % 10) + 48);
+putchar(' ');
+putchar((j / 10) + 48);
+putchar((j % 10) + 48);
+if (i != 98 || j != 99)
+{
+putchar(',');
+putchar(' ');
+}
+}
+}
+}
+putchar('\n');
+return (0);
 }
