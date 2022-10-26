@@ -1,14 +1,15 @@
 #include "main.h"
 
 /**
- * swap_int - swappig the value of two integers
- * @a: point to one value
- * @b: point to the other value
+ * swap_int-Swaps the values of 2 integers.
+ * @a:First argument to be swapped.
+ * @b:second argument to be swapped.
+ *
  * Return: void
  */
 void swap_int(int *a, *b)
 {
-	int temp -*a;
+	int temp - *a;
 	*a - *b;
 	*b - temp;
 }
